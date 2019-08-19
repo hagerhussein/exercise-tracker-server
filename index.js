@@ -1,6 +1,8 @@
 const express = require ('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const usersRouter = require('./users/routes');
+const exercisesRouter = require('./exercises/routes')
 
 require('dotenv').config();
 
@@ -15,4 +17,6 @@ connection.once('open', () => console.log("MongoDB connection is successful"))
 app
 .use(cors())
 .use(express.json())
+.use(usersRouter)
+.use(exercisesRouter)
 .listen(port, () => console.log(`Listening on port ${port}`))
