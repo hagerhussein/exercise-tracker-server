@@ -21,6 +21,35 @@ In order to run this App please ensure you have the server running as well.
 - npm install
 - npm run start
 ## API Endpoints
+\<base url\> is http://localhost:5000 for local development 
 
+- GET \<base url\>/users
+
+Fetches all users from the database. 
+ 
+- POST \<base url\>/register
+
+Creates a new user in the database. 
+
+- GET \<base url\>/exercises
+
+Fetches all exercises fron the database. 
+
+- POST \<base url\>/add
+
+  Creates and adds a new exercise for a particular user. 
+  
+- GET \<base url\>/exercises/:id
+
+ Fetches an exercise with a specified id from the database. 
+ 
+ - DELETE \<base url\>/exercises/:id
+ 
+ Deletes an exercise with a specified id from the database. 
+ 
+- POST \<base url\>/exercises/update/:id
+
+Updates an exercise with a specified id from the database. 
+ 
 
 
